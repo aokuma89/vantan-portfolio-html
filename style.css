@@ -1,0 +1,910 @@
+body{
+    background-color: rgb(112, 19, 19);
+    /* position: relative; */
+}
+header {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    z-index: 10000;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    top: 0;
+    left: 0;
+  }
+  #gnav_btn {
+    position: absolute;
+    width: 100px;
+    height: 52px;
+    top: 40px;
+    right: 50px;
+    z-index: 10000;
+    cursor: pointer;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    border: 1px solid yellow;
+    border-radius: 50px;
+  }
+  #gnav_btn span {
+    display: inline-block;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    position: absolute;
+    left: 30px;
+    height: 3px;
+    background-color: yellow;
+    width: 40%;
+  }
+  #gnav_btn span:nth-of-type(1) {
+    top: 15px;
+  }
+  #gnav_btn span:nth-of-type(2) {
+    top: 23px;
+  }
+  #gnav_btn span:nth-of-type(3) {
+    top: 31px;
+  }
+  #gnav_btn:hover {
+    background-color: rgba(27, 45, 122, 0.7);
+    border-color: #fff;
+  }
+  #gnav_btn:hover span {
+    background: #fff;
+  }
+  #gnav_btn.open {
+    border: 1px solid #fff;
+  }
+  #gnav_btn.open span {
+    background: #fff;
+  }
+  #gnav_btn.open span:nth-of-type(1) {
+    top: 18px;
+    left: 32px;
+    -webkit-transform: translateY(6px) rotate(-45deg);
+            transform: translateY(6px) rotate(-45deg);
+    width: 35%;
+  }
+  #gnav_btn.open span:nth-of-type(2) {
+    opacity: 0;
+  }
+  #gnav_btn.open span:nth-of-type(3) {
+    top: 30px;
+    left: 32px;
+    -webkit-transform: translateY(-6px) rotate(45deg);
+            transform: translateY(-6px) rotate(45deg);
+    width: 35%;
+  }
+  #gnav_btn.open:hover span {
+    background: #fff;
+  }
+  nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    overflow-y: scroll;
+    color: #fff;
+    height: 100%;
+  }
+  nav::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #555;
+    opacity: 0.9;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .header-nav {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    width: 82%;
+    max-width: 1000px;
+    margin: 160px auto 0;
+    line-height: 1.2;
+  }
+  .header-nav a{
+    display: inline-block;
+    margin-bottom: 40px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: none;
+    transition: all 1s;
+  }
+  .header-nav a:hover{
+    color: yellow;
+  }
+main{
+    width: 100%;
+    margin: auto;
+    position: relative;
+   
+}
+.fv{
+    padding: 50px;
+    margin-bottom: 160px;
+    position: relative;
+}
+.fv img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+.fv h1{
+    /* position: fixed; */
+    /* left: 50%; */
+    /* bottom: 0; */
+    /* z-index: 99; */
+    /* transform: translateX(-50%); */
+    margin-top: 20px;
+    text-align: center;
+    color: rgb(212, 233, 23);
+    font-size: 170px;
+    line-height: 1;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-bottom: 100px;
+}
+
+
+.favorite{
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 20px 120px;
+    text-align: center;
+  
+}
+.section-title{
+  margin-top: -270px;
+  margin-bottom: -30px;
+    color: yellow;
+    font-size: 100px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.favorite h3{
+    color: #fff;
+    margin-top: 80px;
+    font-size: 40px;
+}
+.favorite h3 span{
+    font-size: 60px;
+    color: rgb(233, 255, 36);
+}
+.card{
+    display: flex;
+    /* justify-content: space-around; */
+    justify-content: space-between;
+    width: 100%;
+    background: rgb(255, 236, 236);
+    border-radius: 40px;
+    padding: 60px;
+}
+.card img{
+    width: 50%;
+    max-width: 400px;
+    height: 450px;
+    border-radius: 24px;
+    object-fit: cover;
+}
+.card .text{
+    width: 48%;
+    text-align: left;
+    /* padding-right: 40px; */
+}
+.card .text h4{
+    color: rgba(144, 158, 15, 0.84);
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+.card .sns{
+    margin-top: 24px;
+}
+.sns img{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin-right: 2px;
+}
+.gallery {
+    margin-top: 100px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 20px 120px;
+    max-width: 1200px;
+}
+.gallery .section-title {
+    margin-bottom: 60px;
+    
+}
+.images {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+.images:last-child{
+    align-items: start;
+}
+/* .images.last{
+    align-items: start;
+} */
+.fadeIn {
+  opacity: 0;
+  transition-duration: 1100ms;
+  transition-property: opacity, transform;
+  transform: translate(0, 50px);
+}
+.fadeIn.scrollin {
+  opacity: 1;
+  transform: translate(0,0);
+}
+
+
+
+/* ＠ */
+
+/* Loading背景画面設定　*/
+#splash {
+  /*fixedで全面に固定*/
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background:#333;
+    text-align:center;
+    color:#fff;
+  }
+  
+  /* Loading画像中央配置　*/
+  #splash_logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Loading アイコンの大きさ設定　*/
+  #splash_logo img {
+    width:10000px;
+  }
+  
+  /* fadeUpをするアイコンの動き */
+  .fadeUp{
+  animation-name: fadeUpAnime;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+  opacity: 0;
+  }
+  
+  @keyframes fadeUpAnime{
+    from {
+      opacity: 0;
+    transform: translateY(100px);
+    }
+  
+    to {
+      opacity: 1;
+    transform: translateY(0);
+    }
+  }
+
+.about{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin-top: -50px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.about-img{
+  width: 45%;
+  aspect-ratio: 56/45;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 20px;
+  
+}
+.about-caption{
+  width: 48%;
+  padding-top: 40px;
+  margin-left: 50px;
+}
+
+.about-name{
+  margin-top: 20px;
+font-size: 50px;
+color: #0c7a7a;
+}
+.about-job{
+  margin-top: 20px;
+  font-size: 30px;
+  color: #0c7a7a;
+}
+.about-text{
+  margin-top: 20px;
+  font-size: 30px;
+  color: #0c7a7a;
+}
+.about-hey{
+  margin-top: 20px;
+  font-size: 30px;
+  color: #0c7a7a;
+}
+.sns{
+  display: flex;
+  margin-top: 24px;
+  gap: 8px;
+}
+.skill{
+  width: 100%;
+  max-width: 1450px;
+  margin: 120px auto 0;
+  text-align: center;
+}
+
+.skill h2{
+  font-size: 70px;
+  line-height: 1.2;
+  font-weight: 900;
+  color: #12B0B1;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.skill span{
+  font-size: 40px;
+  text-align: center;
+  color: rgb(217, 217, 0);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.skill-content{
+  margin-top: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+}
+
+.skill-item{
+  width: 23%;
+  margin-bottom: 1%;
+}
+
+.skill-item img{
+  width: 100%;
+  aspect-ratio: 29/18;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.skill-item span{
+  font-size: 16px;
+  line-height: 1.2;
+  margin-top: 4px;
+  font-weight: 700;
+  color: yellow;
+}
+.works{
+  padding-top: 200px;
+  /* width: 100%;
+  margin-top: 120px; */
+}
+.works-title{
+  width: 90%;
+  position: relative;
+  max-width: 1200px;
+  margin-inline: auto;
+  font-size: 24px;
+  letter-spacing: .15em;
+  z-index: 100;
+  color: yellow;
+  left: 100px;
+}
+.works-title::before{
+  content: "Works";
+  display: inline-block;
+  font-size: 160px;
+  font-weight: 900;
+  line-height: 1;
+  color: #12B0B1;
+  position: absolute;
+  bottom: 0;
+  left: -19%;
+  z-index: -1;
+  opacity: .7;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  /* text-align: left; */
+  /* position: absolute;
+  font-size: 90px;
+  bottom: 0%;
+  left: 3%;
+  color: aqua;
+  margin-left: -120px;
+  margin-bottom: -10px;
+  z-index: -1;
+  letter-spacing: -5px;
+  opacity: 0.8; */
+}
+.works-list li{
+  list-style: none;
+  
+}
+.works-list{
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* flex-wrap: wrap; */
+  padding: 0;
+  gap: 8px;
+}
+.works-list img{
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+
+/* スマホ版 */
+
+@media screen and (max-width: 800px){
+  .body{
+    width: 130%;
+  }
+  .about {
+    flex-direction: column;
+      margin-left: auto;
+      margin-right: auto;
+      width:  62em
+    }
+    .about-img{
+      border-radius: 30px;
+      margin-top: -70px;
+      /* width: 100%; */
+      margin-left: auto;
+      margin-right: auto;
+      width:  62em
+      
+    }
+    .about-caption{
+      /* width: 100%; */
+      margin-left: auto;
+      margin-right: auto;
+      width:  150%
+    }
+    .skill{
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      width:  62em
+    }
+    .skill-dosiyo{
+      width: 100%;
+    }
+    .skill-item{
+      width: 100%;
+    }
+    .skill-content{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+    
+    }
+    .works{
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      width:  62em
+    }
+    .works-title{
+     margin-top: 150px;
+    }
+    .works-list{
+      grid-template-columns: repeat(2,1fr);
+    }
+    .section-title{
+      font-size: 58px;
+      
+    }
+    .favorite{
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      width:  62em
+    }
+    .section-title{
+      margin-top: 100px;
+    }
+    
+    .fv{
+      margin-left: auto;
+      margin-right: auto;
+      width:  62em
+    }
+    .fv h1{
+      font-size: 140px;
+    }
+    .gallery {
+      text-align: center;
+      max-width: 700px;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+  /*==================================================
+スライダーのためのcss
+===================================*/
+.slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
+  width:94%;
+  margin:0 auto;
+}
+
+.slider img {
+  width:45vw;/*スライダー内の画像を60vwにしてレスポンシブ化*/
+  height:auto;
+
+}
+
+.slider .slick-slide {
+transform: scale(0.8);/*左右の画像のサイズを80%に*/
+transition: all .5s;/*拡大や透過のアニメーションを0.5秒で行う*/
+opacity: 0.5;/*透過50%*/
+}
+
+.slider .slick-slide.slick-center{
+transform: scale(1);/*中央の画像のサイズだけ等倍に*/
+opacity: 1;/*透過なし*/
+}
+
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev, 
+.slick-next {
+  position: absolute;/*絶対配置にする*/
+  top: 42%;
+  cursor: pointer;/*マウスカーソルを指マークに*/
+  outline: none;/*クリックをしたら出てくる枠線を消す*/
+  border-top: 2px solid yellow;/*矢印の色*/
+  border-right: 2px solid yellow;/*矢印の色*/
+  height: 15px;
+  width: 15px;
+}
+
+.slick-prev {/*戻る矢印の位置と形状*/
+  left: -1.5%;
+  transform: rotate(-135deg);
+}
+
+.slick-next {/*次へ矢印の位置と形状*/
+  right: -1.5%;
+  transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+  text-align:center;
+margin:20px 0 0 0;
+}
+
+.slick-dots li {
+  display:inline-block;
+margin:0 5px;
+}
+
+.slick-dots button {
+  color: transparent;
+  outline: none;
+  width:8px;/*ドットボタンのサイズ*/
+  height:8px;/*ドットボタンのサイズ*/
+  display:block;
+  border-radius:50%;
+  background:#ccc;/*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button{
+  background:#333;/*ドットボタンの現在地表示の色*/
+}
+
+
+
+
+/* footer */
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  /* background: #333; */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: #999;
+  text-decoration: none;
+  
+}
+
+a:hover {
+  color: #000;
+}
+
+.flex {
+  display: flex;
+}
+
+hr {
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+.footer {
+  padding: 2rem;
+  font-size: 15px;
+  color: #999;
+  background: #fff;
+}
+
+.footer__navi {
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  font-size: 22px;
+}
+
+.footer__navi li {
+  display: inline-block;
+}
+
+.footer__navi li:not(:last-child) {
+  margin-right: 16px;
+}
+
+.footer__logo {
+  display: inline-block;
+  margin-bottom: 1rem;
+  margin-left: -120px;
+}
+
+@media (min-width: 768px) {
+  .md-flex {
+    display: flex;
+  }
+
+  .md-justify-between {
+    justify-content: space-between;
+  }
+
+  .copyright {
+    text-align: left;
+  }
+}
+
+
+.fv-title-inner{
+  position: relative;
+}
+
+
+/*=== 9-1-3 マウスが動いてスクロールを促す ====*/
+
+/*スクロールダウン全体の場所*/
+.scrolldown3{
+  /*描画位置※位置は適宜調整してください*/
+  position:absolute;
+  top: 70%;
+  right: 12%;
+  
+  /*マウスの動き1.6秒かけて動く永遠にループ*/
+/* animation:mousemove 1.6s ease-in-out infinite; */
+}
+
+/*下からの距離が変化して上から下に動く*/
+@keyframes mousemove{
+    0%{
+      transform: translateY(0);
+    }
+    50%{
+      transform: translateY(20px);
+    }
+    100%{
+     transform: translateY(0);
+  }
+}
+
+/*Scrollテキストの描写*/
+.scrolldown3 span{
+  /*描画位置*/
+position: absolute;
+left:-15px;
+bottom:45px;
+  /*テキストの形状*/
+color: #eee;
+font-size: 0.7rem;
+letter-spacing: 0.05em;
+}
+
+/*マウスの中の線描写 */
+.scrolldown3 span::after{
+content: "";
+  /*描画位置*/
+position: absolute;
+top:10px;
+left:17px;
+  /*線の形状*/
+width: 1px;
+height: 15px;
+background: #eee;
+  /*線の動き1.4秒かけて動く。永遠にループ*/
+animation: mousepathmove 1.4s linear infinite;
+opacity:0;
+}
+
+/*上からの距離・不透明度・高さが変化して上から下に流れる*/
+@keyframes mousepathmove{
+0%{
+  height:0;
+  top:10px;
+  opacity: 0;
+}
+50%{
+  height:15px;
+  opacity: 1;
+}
+100%{
+  height:0;
+  top:30px;
+  opacity: 0;
+}
+}
+
+/*マウスの描写 */
+.scrolldown3:before {
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  bottom:0;
+  left:-10px;
+  /*マウスの形状*/
+width:25px;
+height:37px;
+border-radius: 10px;
+border:1px solid #eee;
+}
+
+
+/*マウスの中の丸の描写*/
+.scrolldown3:after{
+content:"";
+  /*描画位置*/
+position: absolute;
+bottom:26px;
+left:0;
+  /*丸の形状*/
+width:5px;
+height: 5px;
+border-radius: 50%;
+border:1px solid #eee;
+}
+
+
+
+
+
+
+
+/*========= ページトップのためのCSS ===============*/
+/*リンクを右下に固定*/
+#page-top {
+	position: fixed;
+	right: 10px;
+	bottom:30px;
+	z-index: 2;
+    /*はじめは非表示*/
+	opacity: 0;
+	transform: translateY(150px);
+}
+
+/*　上に上がる動き　*/
+#page-top.UpMove{
+	animation: UpAnime 0.5s forwards;
+}
+
+@keyframes UpAnime{
+  from {
+    opacity: 0;
+	transform: translateY(150px);
+  }
+  to {
+    opacity: 1;
+	transform: translateY(0);
+  }
+}
+
+/*　下に下がる動き　*/
+#page-top.DownMove{
+	animation: DownAnime 0.5s forwards;
+}
+
+@keyframes DownAnime{
+  from {
+  	opacity: 1;
+	transform: translateY(0);
+  }
+  to {
+  	opacity: 1;
+	transform: translateY(150px);
+  }
+}
+
+/*画像の切り替えと動き*/
+#page-top a {
+    /*aタグの形状*/
+	display: block;
+	width: 140px;
+	height: 120px;
+	color: #333;
+	text-align: center;
+	text-transform: uppercase; 
+	text-decoration: none;
+	font-size:0.6rem;
+    /*背景画像の指定*/
+	background: url("https://chojugiga.com/c/choju27_0014/choju27_0014.png") no-repeat center;
+	background-size: contain;
+}
+
+#page-top.floatAnime a{
+	width: 160px;
+	height: 130px;
+    /*背景画像の指定*/
+	background: url("https://chojugiga.com/c/chojudaC0039/chojudaC0039.png") no-repeat center;
+	background-size: contain;
+    /*アニメーションの指定*/
+	animation: floatAnime 2s linear infinite;
+	opacity: 0;
+}
+
+@keyframes floatAnime {
+  0% { transform: translateX(0); opacity: 0; }
+  25% { transform: translateX(-6px);opacity: 1; }
+  50% { transform: translateX(0) }
+  100% { transform: translateX(6px);opacity: 1; }
+}
+
+/*Page Topと書かれたテキストの位置*/
+#page-top span{
+    position: absolute;
+    bottom: -15px;
+    right: 33px;
+    font-size: 15px;
+	color: rgb(184, 218, 51);
+}
+/*検証のためのCSS*/
+section{
+padding: 500px 0;
+}
